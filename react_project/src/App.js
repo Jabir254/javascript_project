@@ -6,8 +6,8 @@ import './App.css';
 function App() {
   return (
     <div>
-      <Header />
-      <Main />
+      <Header name="jabir" color="purple"/>
+      <Main greet="Howdy"/>
       < Sidebar />
     </div>
   )
