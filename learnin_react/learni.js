@@ -147,17 +147,24 @@ for (var i = 0; i < string.length; i++) {
 //console.log(urlFriendly);
 //
 
-
 let color_lawn = {
 	title: "lawn",
 	color: "#00FF00",
-	rating: 0
+	rating: 0,
 };
 
-const rateColor = (color, rating) =>
-{
-	return Object.assign({}, color, {rating:rating});
+const rateColor = (color, rating) => {
+	return Object.assign({}, color, { rating: rating });
 };
 
 console.log(rateColor(color_lawn, 5).rating);
 console.log(color_lawn.rating);
+
+let list = [{ title: "Rad Red" }, { title: "Lawn" }, { title: "Party Pink" }];
+
+const addColor = function (title, colors) {
+	colors.push({ title: title });
+	return colors;
+};
+console.log(addColor("Glam Green", list).length); // 4
+console.log(list.length); // 4
