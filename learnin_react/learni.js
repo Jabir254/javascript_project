@@ -93,7 +93,6 @@ const getPeople = (count) =>
 //	.then((members) => console.log(members))
 //	.catch((error) => console.error(`getPeople failed: ${error.message}`));
 
-
 //classes
 function Vacation(destination, length) {
 	this.destination = destination;
@@ -108,9 +107,41 @@ const maui = new Vacation("Maui", 7);
 
 //maui.print();
 
-      //functional programming
-var log = function(message)
-{
+//functional programming
+var log = function (message) {
 	console.log(message);
 };
-log("In javascript, function are variables");
+//log("In javascript, function are variables");
+
+const messages = [
+	"they can be inserted into arrays",
+	(message) => console.log(message),
+	"like variables",
+	(message) => console.log(message),
+];
+
+//messages[1](messages[0]);
+//messages[3](messages[2]);
+//
+
+const createScream = (logger) => (message) => {
+	logger(message.toUpperCase() + "!!!");
+};
+//const scream = createScream((message) => console.log(message));
+//scream("functions can be returned from other functions");
+//scream("createScream returns a function");
+//scream("scream invokes that returned function");
+
+//imperative approach
+//
+const string = "Restaurants in Hanalei";
+var urlFriendly = "";
+
+for (var i = 0; i < string.length; i++) {
+	if (string[i] === " ") {
+		urlFriendly += "-";
+	} else {
+		urlFriendly += string[i];
+	}
+}
+//console.log(urlFriendly);
