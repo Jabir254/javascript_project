@@ -147,10 +147,17 @@ for (var i = 0; i < string.length; i++) {
 //console.log(urlFriendly);
 //
 
-const { render } = ReactDOM;
-const Welcome = () => (
-	<div id="welcome">
-		<h1>Hello World</h1>
-	</div>
-);
-render(<Welcome />, document.getElementById("target"));
+
+let color_lawn = {
+	title: "lawn",
+	color: "#00FF00",
+	rating: 0
+};
+
+const rateColor = (color, rating) =>
+{
+	return Object.assign({}, color, {rating:rating});
+};
+
+console.log(rateColor(color_lawn, 5).rating);
+console.log(color_lawn.rating);
