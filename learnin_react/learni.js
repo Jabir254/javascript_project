@@ -145,3 +145,12 @@ for (var i = 0; i < string.length; i++) {
 	}
 }
 //console.log(urlFriendly);
+//
+
+const { render } = ReactDOM;
+const Welcome = () => (
+	<div id="welcome">
+		<h1>Hello World</h1>
+	</div>
+);
+render(<Welcome />, document.getElementById("target"));
