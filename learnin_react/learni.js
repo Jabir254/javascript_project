@@ -37,19 +37,27 @@ function directions(...args) {
 }
 directions("Truckee", "Tahoe City", "Sunnyside", "Homewood", "Tahoma");
 
-
 //spread properties
 //
 const morning = {
 	breakfast: "oatmeals",
-	lunch: "peanut butter and jelly"
+	lunch: "peanut butter and jelly",
 };
 
 const dinner = "mac and cheese";
 
-const  backpackingmeals = {
+const backpackingmeals = {
 	...morning,
-	dinner
+	dinner,
 };
 
-console.log(backpackingmeals)
+//console.log(backpackingmeals)
+//
+
+// Asynchronous JavaScript
+//
+fetch("https://api/randomuser.me/?nat=US&results=1")
+	.then((res) => res.json())
+	.then((json) => json.results)
+	.then(console.log)
+	.catch(console.error);
