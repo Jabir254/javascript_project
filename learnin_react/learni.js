@@ -106,4 +106,11 @@ Vacation.prototype.print = function () {
 
 const maui = new Vacation("Maui", 7);
 
-maui.print();
+//maui.print();
+
+      //functional programming
+var log = function(message)
+{
+	console.log(message);
+};
+log("In javascript, function are variables");
