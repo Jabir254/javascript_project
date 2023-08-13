@@ -157,8 +157,8 @@ const rateColor = (color, rating) => {
 	return Object.assign({}, color, { rating: rating });
 };
 
-console.log(rateColor(color_lawn, 5).rating);
-console.log(color_lawn.rating);
+//console.log(rateColor(color_lawn, 5).rating);
+//console.log(color_lawn.rating);
 
 let list = [{ title: "Rad Red" }, { title: "Lawn" }, { title: "Party Pink" }];
 
@@ -166,5 +166,19 @@ const addColor = function (title, colors) {
 	colors.push({ title: title });
 	return colors;
 };
-console.log(addColor("Glam Green", list).length); // 4
-console.log(list.length); // 4
+//console.log(addColor("Glam Green", list).length); // 4
+//console.log(list.length); // 4
+
+//Pure Function
+
+function Header(text) {
+	let h1 = document.createElement("h1");
+	h1.innerText = text;
+	document.body.appendChild(h1);
+}
+Header("Header() caused side effects");
+
+//When writing functions, try to follow these three rules:
+// 1. The function should take in at least one argument.
+// 2. The function should return a value or another function.
+// 3. The function should not change or mutate any of its arguments
