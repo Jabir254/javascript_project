@@ -29,10 +29,27 @@ const { bread, meat } = sandwich;
 function directions(...args) {
 	let [start, ...remaining] = args;
 	let [finish, ...stops] = remaining.reverse();
-	console.log(`drive through ${args.length} towns`);
-	console.log(`start in ${start}`);
-	console.log(`the destination is ${finish}`);
-	console.log(`stopping ${stops.length} times in between`);
-	console.log(`stopping towns are ${stops} `);
+	//console.log(`drive through ${args.length} towns`);
+	//console.log(`start in ${start}`);
+	//console.log(`the destination is ${finish}`);
+	//console.log(`stopping ${stops.length} times in between`);
+	//console.log(`stopping towns are ${stops} `);
 }
 directions("Truckee", "Tahoe City", "Sunnyside", "Homewood", "Tahoma");
+
+
+//spread properties
+//
+const morning = {
+	breakfast: "oatmeals",
+	lunch: "peanut butter and jelly"
+};
+
+const dinner = "mac and cheese";
+
+const  backpackingmeals = {
+	...morning,
+	dinner
+};
+
+console.log(backpackingmeals)
