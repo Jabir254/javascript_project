@@ -89,6 +89,21 @@ const getPeople = (count) =>
 		request.send();
 	});
 
-getPeople(5)
-	.then((members) => console.log(members))
-	.catch((error) => console.error(`getPeople failed: ${error.message}`));
+//getPeople(5)
+//	.then((members) => console.log(members))
+//	.catch((error) => console.error(`getPeople failed: ${error.message}`));
+
+
+//classes
+function Vacation(destination, length) {
+	this.destination = destination;
+	this.length = length;
+}
+
+Vacation.prototype.print = function () {
+	console.log(this.destination + " | " + this.length + " days");
+};
+
+const maui = new Vacation("Maui", 7);
+
+maui.print();
