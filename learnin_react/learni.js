@@ -194,19 +194,19 @@ const addColor = function (title, colors) {
 //const highSchools = schools.map((school) => `${school} High School`);
 //console.log(highSchools.join("\n"));
 
-const ages = [21, 18, 42, 40, 64, 63, 34];
+//const ages = [21, 18, 42, 40, 64, 63, 34];
 
-const maxAge = ages.reduce((max, age) => {
-	console.log(`${age} > ${max} = ${age > max}`);
-	if (age > max) {
-		return age;
-	} else {
-		return max;
-	}
-}, 0);
+//const maxAge = ages.reduce((max, age) => {
+//	console.log(`${age} > ${max} = ${age > max}`);
+//	if (age > max) {
+//		return age;
+//	} else {
+//		return max;
+//	}
+//}, 0);
 
-const max = ages.reduce((max, value) => (value > max ? value : max), 0);
-console.log(max);
+//const max = ages.reduce((max, value) => (value > max ? value : max), 0);
+//console.log(max);
 
 //High-order functional
 //
@@ -215,8 +215,10 @@ const invokeif = (condition, fntrue, fnfalse) =>
 const showwelcome = () => console.log("welcome");
 const showunauthorized = () => console.log("Unauthorized!!!");
 
-invokeif(true, showwelcome, showunauthorized);
-invokeif(false, showwelcome, showunauthorized);
+//invokeif(true, showwelcome, showunauthorized);
+//invokeif(false, showwelcome, showunauthorized);
+
+//recursion
 
 function countdown(value, fn, delay = 1000) {
 	fn(value);
@@ -225,4 +227,12 @@ function countdown(value, fn, delay = 1000) {
 		: value;
 }
 const log1 = (value) => console.log(value);
-countdown(10, log1);
+//countdown(10, log1);
+//
+const template = "hh:mm:ss tt";
+const clockTime = template
+ .replace("hh", "03")
+ .replace("mm", "33")
+ .replace("ss", "33")
+ .replace("tt", "PM");
+console.log(clockTime);
