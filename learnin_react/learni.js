@@ -235,4 +235,8 @@ const clockTime = template
  .replace("mm", "33")
  .replace("ss", "33")
  .replace("tt", "PM");
-console.log(clockTime);
+//console.log(clockTime);
+//
+//Putting all together
+
+
