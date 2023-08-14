@@ -171,14 +171,47 @@ const addColor = function (title, colors) {
 
 //Pure Function
 
-function Header(text) {
-	let h1 = document.createElement("h1");
-	h1.innerText = text;
-	document.body.appendChild(h1);
-}
-Header("Header() caused side effects");
+//function Header(text) {
+//	let h1 = document.createElement("h1");
+//	h1.innerText = text;
+//	document.body.appendChild(h1);
+//}
+//Header("Header() caused side effects");
 
 //When writing functions, try to follow these three rules:
 // 1. The function should take in at least one argument.
 // 2. The function should return a value or another function.
 // 3. The function should not change or mutate any of its arguments
+//
+// Data transformations
+//
+//const schools = ["Yorktown", "Washington & liberty", "Wakefield", "Wabera"];
+//console.log(schools.join(", "));
+
+//const wSchools = schools.filter((school) => school[0] === "W");
+//console.log(wSchools);
+
+//const highSchools = schools.map((school) => `${school} High School`);
+//console.log(highSchools.join("\n"));
+
+let schools = [
+	{ name: "Yorktown" },
+	{ name: "Stratford" },
+	{ name: "Washington & Liberty" },
+	{ name: "Wakefield" },
+];
+let updatedSchools = editName("Stratford", "HB Woodlawn", schools);
+console.log(updatedSchools[1]); // { name: "HB Woodlawn" }
+console.log(schools[1]); // { name: "Stratford" }
+//
+const editName = (oldName, name, arr) =>
+	arr.map((item) => {
+		if (item.name === oldName) {
+			return {
+				...item,
+				name,
+			};
+		} else {
+			return item;
+		}
+	});
