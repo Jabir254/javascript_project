@@ -30,7 +30,6 @@ const prependZero = (key) => (clockTime) => ({
 });
 const convertToCivilianTime = (clockTime) =>
 	compose(appendAMPM, civilianHours)(clockTime);
-i;
 const doubleDigits = (civilianTime) =>
 	compose(
 		prependZero("hours"),
