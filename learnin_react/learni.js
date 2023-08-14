@@ -218,9 +218,11 @@ const showunauthorized = () => console.log("Unauthorized!!!");
 invokeif(true, showwelcome, showunauthorized);
 invokeif(false, showwelcome, showunauthorized);
 
-function countdown(value, fn) {
+function countdown(value, fn, delay = 1000) {
 	fn(value);
-	return value > 0 ? countdown(value - 1, fn) : value;
-};
-
-countdown(20, value => console.log(value));
+	return value > 0
+		? setTimeout(() => countdown(value - 1, fn, delay), delay)
+		: value;
+}
+const log1 = (value) => console.log(value);
+countdown(10, log1);
