@@ -204,3 +204,16 @@ const maxAge = ages.reduce((max, age) => {
 		return max;
 	}
 }, 0);
+
+const max = ages.reduce((max, value) => (value > max ? value : max), 0);
+console.log(max);
+
+//High-order functional
+//
+const invokeif = (condition, fntrue, fnfalse) =>
+	condition ? fntrue() : fnfalse();
+const showwelcome = () => console.log("welcome");
+const showunauthorized = () => console.log("Unauthorized!!!");
+
+invokeif(true, showwelcome, showunauthorized);
+invokeif(false, showwelcome, showunauthorized);
