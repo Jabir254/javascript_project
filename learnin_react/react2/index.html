@@ -6,7 +6,6 @@
   </head>
   <body>
     <!-- Target Container -->
-    <div id="react-container"></div>
     <section id="baked-salmon">
       <h1>Baked Salmon</h1>
       <ul class="ingredients">
@@ -40,6 +39,8 @@
 
     <script>
       // JavaScript Code with Pure React
+      const dish = React.createElement("h1", {id:"recipe-0"}, "Baked Salmon");
+      ReactDom.render(dish, document.getElementById("root"))
     </script>
   </body>
 </html>
