@@ -17,3 +17,5 @@ function Menu({ recipes }) {
         </article>
     );
 }
+
+export default Menu;
