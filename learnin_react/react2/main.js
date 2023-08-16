@@ -54,15 +54,14 @@ function Recipe({ name, ingredients, steps }) {
     );
 }
 
-function Menu({ title, recipes})
-{
+function Menu({ title, recipes }) {
     return (
         <article>
             <header>
                 <h1>{title}</h1>
             </header>
             <div className="recipe">
-                {recipes.map((recipe, i) =>(
+                {recipes.map((recipe, i) => (
                     <recipe key={i} {...recipe} />
                 ))}
             </div>
@@ -74,3 +73,8 @@ ReactDom.render(
     <menu recipes={data} title="Delicious Recipes" />,
     document.getElementById("root")
 );
+
+function cat({ name }) {
+    return <h1>The cats name is {name}</h1>;
+}
+ReactDom.render(<cat name="jungle" />, document.getElementById("root"));
