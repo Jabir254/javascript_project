@@ -1,15 +1,27 @@
 import React, { useState } from "react";
-import { FaStar } from "react-icons/fa";
+import colorData from "./color-data.json";
+import ColorList from "./ColorList.js";
 
-export default function StarRating({ totalStars = 5, selectedStars = 0 }) {
+export default function App() {
+	const [colors, setColors] = useState(colorData);
+
+	const removeColor = (id) => {
+		const newColors = colors.filter((color) => color.id !== id);
+		setColors(newColors);
+	};
+
+	const rateColor = (id, rating) => {
+		const newColors = colors.map((color) =>
+			color.id === id ? { ...color, rating } : color
+		);
+		setColors(newColors);
+	};
+
 	return (
-		<>
-			{createArray(totalStars).map((n, i) => (
-				<Star key={i} selected={selectedStars > i} />
-			))}
-			<p>
-				{selectedStars} of {totalStars} stars
-			</p>
-		</>
+		<ColorList
+			colors={colors}
+			onRemoveColor={removeColor}
+			onRateColor={rateColor}
+		/>
 	);
 }
