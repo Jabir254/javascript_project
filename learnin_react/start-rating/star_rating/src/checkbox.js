@@ -3,7 +3,7 @@ import React, { useState } from react;
 function Checkbox() {
     const [checked, setChecked] = useState(false);
 
-    alert("checked:  ${checked.toString()}");
+    
 
     return (
         <>
@@ -15,4 +15,5 @@ function Checkbox() {
         {checked ? "checked" : "not checked"}
         </>
     );
+    alert("checked:  ${checked.toString()}");
 };
