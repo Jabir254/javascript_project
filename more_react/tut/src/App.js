@@ -9,11 +9,15 @@ function App() {
   );
 }
 
+
 const GetName = (props) => {
-  return <h2>Pedro</h2>;
-};
-const GetNamecomponent = () => {
-  return <h1>Pedro</h1>;
+  return (
+    <div>
+      <h2>{props.name}</h2>
+      <h2>{props.age}</h2>
+      <h2>{props.email}</h2>
+    </div>
+  )
 };
 
 export default App;
