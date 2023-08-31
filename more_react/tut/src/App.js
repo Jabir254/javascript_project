@@ -1,9 +1,16 @@
 import "./App.css";
 
 function App(){
+
+  const names = ["pedro", "jake", "jessica", "Mike", "Dustin", "lucas"];
+
   return (
-    <div className = "App">
-      <h1 className="name"> Pedro</h1>
+    <div className ="App">
+      {names.map((name, key) => {
+        return <ul>
+          <li>{name}</li>
+        </ul>
+      })}
     </div>
   );
 }

@@ -1,7 +1,5 @@
 .App {
   text-align: center;
-}
-
-.name{
-  color: red;
+  color:aqua;
+  background-color: black;
 }
