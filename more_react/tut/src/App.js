@@ -3,16 +3,30 @@ import { useState } from 'react';
 
 
 function App() {
-  const [inputValue, setInputValue] = useState("");
+  const [count, setCount]  = useState(0);
+  
+  const increase = () => {
+    setCount(count + 1);
+  }
 
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value)
-  };
+  const decrease = () => {
+    setCount(count- 1);
+  }
+
+  const setToZero = () => {
+    setCount(0);
+  }
+
 
   return (
     <div className="App">
-      <input type="text" onChange={handleInputChange}/>
-      {inputValue}
+      <button onClick={increase}>Increase</button>
+      <button onClick={decrease}>Decrease</button>
+      <button onClick={setToZero}>Set to Zero</button>
+
+      {count}
+
+
     </div>
   );
 }
