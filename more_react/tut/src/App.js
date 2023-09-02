@@ -11,9 +11,12 @@ function App(){
     {name:"Uranus", isGasPlanent:true},
   ];
 
-  return <div className="App">
-
+  return (<div className="App">
+    {planets.map((planet, key) =>{
+      if (!planet.isGasPlanent) return <h1>{planet.name}</h1>
+    })}
   </div>
+  );
 }
 
 export default App;
