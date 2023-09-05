@@ -3,11 +3,11 @@ import { useState } from "react";
 import { Text } from "./Text";
 
 
-function App() {
+function User() {
     const [showText, setShowText] = useState(false);
 
     return (
-        <div className="App">
+        <div className="User">
             <button
                 onClick={() => {
                     setShowText(!showText);
@@ -20,4 +20,4 @@ function App() {
     );
 }
 
-export default App;
+export default User;
