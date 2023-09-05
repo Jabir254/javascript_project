@@ -7,9 +7,9 @@ export const Text = () => {
     return (
         <div>
             <input
-            onChange={(event) => {
-                setText(event.target.value);
-            }}
+                onChange={(event) => {
+                    setText(event.target.value);
+                }}
             />
 
             <h1> {text} </h1>
