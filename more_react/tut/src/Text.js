@@ -10,7 +10,7 @@ export const Text = () => {
         return (
             console.log("component unmounted")
         );
-    })
+    },[]);
     
     return (
         <div>
