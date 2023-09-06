@@ -5,7 +5,11 @@ export const Text = () => {
     const [text, setText] = useState("");
     
     useEffect(() => {
-        console.log("component mounted")
+        console.log("component mounted");
+
+        return (
+            console.log("component unmounted")
+        );
     })
     
     return (
@@ -20,4 +24,4 @@ export const Text = () => {
 
         </div>
     );
-};
+}; 
