@@ -2,17 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import User from "./User"
-import Cat from "./Cat";
-import Name from "./Name"
+// import User from "./User"
+// import Cat from "./Cat";
+// import Name from "./Name"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <User />
+    {/* <User />
     <Cat />
-    <Name />
+    <Name /> */}
   </React.StrictMode>
 );
 
