@@ -8,6 +8,8 @@ return <div className="App">
   <Router>
   <Routes>
     <Route path="/" element={<Home />} />
+    <Route path="/" element={<Menu />} />
+    <Route path="/" element={<Contact />} />
   </Routes>
 </Router>
 
