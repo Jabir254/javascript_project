@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import User from "./User"
 import Cat from "./Cat";
+import Name from "./Name"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,6 +12,7 @@ root.render(
     <App />
     <User />
     <Cat />
+    <Name />
   </React.StrictMode>
 );
 
