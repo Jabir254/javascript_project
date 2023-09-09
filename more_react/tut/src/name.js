@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 function Name() {
     const [name, setName] = useState("");
     const fetchData = () => {
-        Axios.get(`https://api.agify.io/?name=${name}`).then((res) =>{
+        Axios.get(`https://api.agify.io/?name=${name}`).then((res) => {
             console.log(res.data);
         });
     };
@@ -13,10 +13,10 @@ function Name() {
     return (
         <div className="Name">
             <input
-            placeholder="Ex. Pedro..."
-            onChange={(event) => {
-                setName(event.target.value);
-            }}
+                placeholder="Ex. Pedro..."
+                onChange={(event) => {
+                    setName(event.target.value);
+                }}
             />
             <button onClick={fetchData}>Predict Age</button>
         </div>
