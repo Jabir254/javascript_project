@@ -5,6 +5,7 @@ import App from './App';
 // import User from "./User"
 // import Cat from "./Cat";
 // import Name from "./Name"
+import  Form  from "./components/Form";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,8 @@ root.render(
     {/* <User />
     <Cat />
     <Name /> */}
+    <Form />
+    
   </React.StrictMode>
 );
 
