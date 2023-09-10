@@ -4,7 +4,7 @@ import { Home } from "./pages/Home";
 import { Contact } from "./pages/Contact";
 import { Menu } from "./pages/Menu";
 import { Navbar } from "./Navbar";
-import { useState, useContext } from "react";
+import { useState, createContext } from "react";
 
 export const Appcontext = createContext();
 
