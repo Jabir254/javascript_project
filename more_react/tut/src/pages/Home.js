@@ -1,6 +1,9 @@
-import { useContext } from "react"
-import { Appcontext } from "../App"
-export const Home = () => {
-    const {username} = useContext(Appcontext);
-    return <h1>This is the home page and the user is: {username}</h1>
+import { useQuery } from "@tanstack/react-query";
+import Axios from "axios";
+export const Home = () =>{
+    const {data, isLoading} = useQuery(["cat"], () =>{
+        return Axios.get("https://catfact.ninja/fact").then((res) => res.data);
+    } );
+
+    return <h1>This is the homepage <p>{data?.fact}</p></h1>
 }
