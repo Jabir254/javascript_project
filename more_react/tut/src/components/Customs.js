@@ -1,12 +1,12 @@
 import "../App.css";
-import { useState } from "react";
+import { useToggle } from "./useToggle";
 
 function Customs() {
-    const [isVisible, setIsvisible] = useState(false);
+    const [isVisible, toggle] = useToggle()
 
     return (
         <div className="Customs">
-            <button onClick={() => setIsvisible((prev) => !prev)}>
+            <button onClick={toggle}>
                 {isVisible ? "Hide" : "Show"}
             </button>
             {isVisible && <h1>Hidden Text</h1>}
