@@ -5,16 +5,18 @@ import App from './App';
 // import User from "./User"
 // import Cat from "./Cat";
 // import Name from "./Name"
-import  Form  from "./components/Form";
+// import  Form  from "./components/Form";
+import Customs from './components/Customs';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    {/* <User />
+    {/* <App />
+    <User />
     <Cat />
-    <Name /> */}
-    <Form />
+    <Name />
+    <Form /> */}
+    <Customs />
     
   </React.StrictMode>
 );

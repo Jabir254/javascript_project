@@ -1,4 +1,4 @@
-import "./App.css";
+import "../App.css";
 import { useState } from "react";
 
 function Customs() {
@@ -9,7 +9,7 @@ function Customs() {
             <button onClick={() => setIsvisible((prev) => !prev)}>
                 {isVisible ? "Hide" : "Show"}
             </button>
-            {isVisible && <H1>Hidden Text</H1>}
+            {isVisible && <h1>Hidden Text</h1>}
         </div>
     );
 }
