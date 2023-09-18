@@ -6,16 +6,16 @@ function Cat() {
     const [catFacts, setCatfacts] = useState("");
 
     const fetchCatFact = () => {
-         Axios.get("https://catfact.ninja/fact").then((res) => {
+        Axios.get("https://catfact.ninja/fact").then((res) => {
             setCatfacts(res.data.fact);
         });
     };
-    
+
 
     useEffect(() => {
         fetchCatFact();
     }, []);
-       
+
 
     return (
         <div className="Cat">
