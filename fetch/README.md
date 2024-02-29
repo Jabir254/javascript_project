@@ -12,8 +12,8 @@ let formData = new FormData([form]);
 
 ### FormData Methods
 
-formData.append(name, value)
-formData.append(name, blob, filename)
-formData.delete(name)
-formData.get(name)
-formData.has(name)
+- formData.append(name, value)
+- formData.append(name, blob, filename)
+- formData.delete(name)
+- formData.get(name)
+- formData.has(name)
